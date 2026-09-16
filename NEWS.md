@@ -4,6 +4,13 @@ Initial Bioconductor submission.
 
 ## Corrections from technical review
 
+* The accessors `sampleMap()` and `exposureNames()` are renamed
+  `cellSampleMap()` and `exposureVariables()`. Both names were already
+  exported as S4 generics by current Bioconductor packages,
+  MultiAssayExperiment and rexposome, so whichever package was attached
+  last masked the other and the masked generic failed on the other's
+  objects. `as_scee()` bridges from rexposome, so its own workflow loads
+  both. The slot keeps its name, and objects built earlier remain valid.
 * `run_sc_exwas()` and `run_multi_exwas()` stop on arguments they do not use.
   A misspelled argument such as `covariats = "age"` previously ran an
   unadjusted analysis without any message.
@@ -172,7 +179,7 @@ Initial Bioconductor submission.
   exposure metadata, and cell-to-donor mapping.
 * `build_scee()` constructs integrated containers.
 * Accessors: `exposureData()`, `exposureInfo()`,
-  `sampleMap()`, `exposureNames()` with replacement methods.
+  `cellSampleMap()`, `exposureVariables()` with replacement methods.
 * `[` subsetting preserves exposure data.
 
 ## Cell-type-specific ExWAS
