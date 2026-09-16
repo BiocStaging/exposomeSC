@@ -234,8 +234,8 @@ only against composition truth.
 
 For a targeted model evaluation, `test_features` fixes the reported family
 while the full feature matrix remains available for library sizes,
-normalisation and dispersion estimation. A missing or unsupported requested feature is reported
-as not estimable; the family must not shrink silently.
+normalisation and dispersion estimation. A missing or unsupported requested
+feature is reported as not estimable; the family must not shrink silently.
 
 # Multiplicity
 

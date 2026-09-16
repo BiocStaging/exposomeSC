@@ -42,8 +42,8 @@ It is an adjusted observational contrast, not a causal effect.
 # Prepare a validated container
 
 `sce` must contain a raw integer `counts` assay and `colData` columns
-identifying donor and cell type. `donor_design` must be numeric, have one row per donor and
-use the same donor identifiers as its row names.
+identifying donor and cell type. `donor_design` must be numeric, have one
+row per donor and use the same donor identifiers as its row names.
 
 ```{r build}
 library(exposomeSC)
